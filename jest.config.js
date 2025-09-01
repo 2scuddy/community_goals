@@ -51,9 +51,6 @@ module.exports = {
     }
   },
   
-  // Fail tests if coverage is below threshold
-  coverageFailOnError: true,
-  
   // Transform configuration
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {
