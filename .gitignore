@@ -102,3 +102,4 @@ dev-debug.log
 # tasks/ 
 .taskmaster/
 .trae
+.env*.local
