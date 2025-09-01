@@ -59,7 +59,11 @@
   "scripts": {
     "start": "vite",
     "build": "vite build --sourcemap",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "preview": "vite preview",
+    "lint": "echo 'Linting not configured yet'",
+    "test": "echo 'Tests not configured yet'",
+    "test:ci": "echo 'CI tests not configured yet'"
   },
   "eslintConfig": {
     "extends": [
