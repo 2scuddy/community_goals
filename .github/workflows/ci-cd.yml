@@ -31,16 +31,8 @@ jobs:
       run: npm run lint --if-present
     
     - name: Run tests with coverage
-      run: npm run test:ci --if-present
-    
-    - name: Check coverage threshold
-      run: |
-        if [ -f coverage/lcov.info ]; then
-          echo "Coverage report found, checking thresholds..."
-          npm run test:coverage-check --if-present || echo "Coverage threshold not met, but continuing..."
-        else
-          echo "No coverage report found, skipping coverage check"
-        fi
+      run: npm run test:ci
+      continue-on-error: false
     
     - name: Build application
       run: npm run build

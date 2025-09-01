@@ -41,7 +41,7 @@ module.exports = {
   // Coverage directory
   coverageDirectory: 'coverage',
   
-  // Coverage thresholds (starting with lower thresholds for initial setup)
+  // Coverage thresholds set to 20% for CI/CD pipeline
   coverageThreshold: {
     global: {
       branches: 20,
@@ -50,6 +50,9 @@ module.exports = {
       statements: 20
     }
   },
+  
+  // Fail tests if coverage is below threshold
+  coverageFailOnError: true,
   
   // Transform configuration
   transform: {
