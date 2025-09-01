@@ -62,8 +62,12 @@
     "serve": "vite preview",
     "preview": "vite preview",
     "lint": "echo 'Linting not configured yet'",
-    "test": "echo 'Tests not configured yet'",
-    "test:ci": "echo 'CI tests not configured yet'"
+    "test": "jest",
+    "test:unit": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --coverage --watchAll=false --ci",
+    "test:integration": "jest --testPathPattern=integration",
+    "test:e2e": "playwright test"
   },
   "eslintConfig": {
     "extends": [
@@ -84,13 +88,26 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@jest/globals": "^30.1.2",
+    "@playwright/test": "^1.55.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/line-clamp": "^0.1.0",
     "@tailwindcss/typography": "^0.5.16",
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^6.0.3",
     "@vitejs/plugin-react": "4.3.4",
     "autoprefixer": "10.4.2",
+    "babel-jest": "^30.1.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^30.1.2",
+    "jest-environment-jsdom": "^30.1.2",
+    "playwright": "^1.55.0",
     "postcss": "^8.5.6",
+    "supertest": "^7.1.4",
     "tailwindcss": "3.4.6",
     "vite": "^5.4.19",
     "vite-tsconfig-paths": "3.6.0"
