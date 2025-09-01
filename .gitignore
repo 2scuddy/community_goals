@@ -81,11 +81,6 @@ temp/
 # Temporary folders
 .tmp
 .temp
-node_modules
-.idea
-package-lock.json
-/build
-.vscode/
-.idea/
-vite.config.*s.*
+
+# Vercel
 .vercel
